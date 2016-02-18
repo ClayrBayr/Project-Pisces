@@ -1,7 +1,7 @@
 name: ProjectPisces
-author: Clayr
+author: ClayrBayr
 version: 1.0
 main: ca.mythcraft.projectpisces.ProjectPisces
 commands:
     fish:
-        description: Gives infinite water breathing two to player
+        description: Gives water breathing

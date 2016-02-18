@@ -8,9 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-
-
-public class CommandTest implements CommandExecutor {
+public class TestCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -19,19 +17,15 @@ public class CommandTest implements CommandExecutor {
 			
 			Player player = (Player) sender;
 			
-			if (label.equalsIgnoreCase("fish")) {
+			if (cmd.getName().equalsIgnoreCase("fish")) {
 				
-				player.sendMessage(ChatColor.BLUE + "You are now a fish");
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, 10000, 1));
-
-					
+				player.sendMessage(ChatColor.AQUA + "You can now breath underwater!");
 			}
 			
 		}
 		else {
-			
 			ProjectPisces.logger.info("Only players can use this command");
-			
 		}
 		
 		return false;
